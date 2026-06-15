@@ -120,6 +120,30 @@ a:hover {
 }
 
 img.socialIcon {
+  display: inline-block;
   height: 30px;
   width: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease, opacity 0.3s ease;
+  animation: socialFloat 6s ease-in-out infinite;
+}
+
+img.socialIcon:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.85)) saturate(1.4);
+  opacity: 1;
+}
+
+@keyframes socialFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-4px) rotate(-1deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(3px) rotate(1deg);
+  }
 }
